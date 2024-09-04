@@ -1,0 +1,32 @@
+﻿ 
+@*Toastr Notification*@
+@if (TempData["Success"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+            toastr.success('@TempData["Success"]')
+         </script>
+}
+@if(TempData["error"]!=null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.error('@TempData["Success"]');
+    </script>
+    
+} 
+
+@*This or that as for notification *@
+
+@* @if (TempData["Success"] != null)
+{
+    <h6>@TempData["Success"]</h6>
+}
+@if(TempData["Error"]!=null)
+{
+    <h6>@TempData["Error"]</h6>
+} *@
+
+ 
